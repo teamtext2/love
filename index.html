@@ -247,23 +247,65 @@
             border-color: var(--primary);
             box-shadow: 0 0 0 2px #ffd6e6;
         }
+        /* Beautiful buttons */
         .btn-calc {
             width: 100%;
             margin-top: 18px;
-            padding: 14px;
+            padding: 14px 18px;
             font-size: 1.15rem;
-            font-weight: 600;
-            background: linear-gradient(90deg, var(--primary), #ffb4c6 120%);
+            font-weight: 700;
             color: #fff;
-            border: none;
-            border-radius: 12px;
+            border: 0;
+            border-radius: 14px;
             cursor: pointer;
-            box-shadow: 0 3px 14px 0 rgba(233, 64, 87, 0.13);
-            transition: background 0.22s, transform 0.1s;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ff5f8f 0%, #e94057 40%, #ff7aa6 100%);
+            box-shadow: 0 10px 20px rgba(233, 64, 87, 0.20), 0 4px 10px rgba(233, 64, 87, 0.12);
+            transition: transform 0.12s ease, box-shadow 0.2s ease, filter 0.2s ease;
         }
-        .btn-calc:hover, .btn-calc:focus {
-            background: linear-gradient(90deg, var(--primary-dark), #ffb4c6 120%);
-            transform: translateY(-2px) scale(1.03);
+        .btn-calc:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(233, 64, 87, 0.26), 0 6px 14px rgba(233, 64, 87, 0.16);
+            filter: brightness(1.03);
+        }
+        .btn-calc:active {
+            transform: translateY(0);
+            box-shadow: 0 8px 16px rgba(233, 64, 87, 0.18), 0 3px 8px rgba(233, 64, 87, 0.12);
+        }
+        .btn-calc:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 4px #ffd6e6, 0 10px 20px rgba(233, 64, 87, 0.20);
+        }
+        .btn-calc::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: -50%;
+            width: 50%;
+            height: 300%;
+            transform: rotate(35deg);
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
+            transition: transform 0.6s ease;
+        }
+        .btn-calc:hover::before {
+            transform: translateX(200%) rotate(35deg);
+        }
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 600ms ease-out;
+            background: rgba(255, 255, 255, 0.55);
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+        @keyframes ripple {
+            to {
+                transform: scale(3.5);
+                opacity: 0;
+            }
         }
         .error-message {
             color: var(--primary);
@@ -286,8 +328,10 @@
         }
         .heart-icon {
             color: var(--primary);
-            font-size: 2rem;
+            width: 1.5em;
+            height: 1.5em;
             vertical-align: middle;
+            display: inline-block;
             animation: heartbeat 1.5s infinite;
         }
         @keyframes heartbeat {
@@ -297,6 +341,177 @@
             60% { transform: scale(1.15);}
             80% { transform: scale(1);}
         }
+        /* Button inner layout and icon */
+        .btn-inner { display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-icon { display: inline-block; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.12)); }
+        
+        /* Enhanced Detailed Analysis Button */
+        .detailed-analysis {
+            margin-top: 20px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.25);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .detailed-analysis::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.8s ease;
+        }
+        
+        .detailed-analysis:hover::before {
+            left: 100%;
+        }
+        
+        .detailed-analysis:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.35);
+        }
+        
+        .detailed-analysis summary {
+            padding: 16px 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .detailed-analysis summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .detailed-analysis summary::before {
+            content: "📊";
+            font-size: 1.3em;
+            animation: pulse 2s infinite;
+        }
+        
+        .detailed-analysis summary::after {
+            content: "▼";
+            font-size: 0.9em;
+            transition: transform 0.3s ease;
+            margin-left: auto;
+        }
+        
+        .detailed-analysis[open] summary::after {
+            transform: rotate(180deg);
+        }
+        
+        .detailed-analysis summary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .detailed-analysis .analysis-content {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 24px 20px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            animation: slideDown 0.4s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .analysis-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .analysis-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .analysis-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+        }
+        
+        .analysis-label {
+            font-weight: 600;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .analysis-score {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #667eea;
+            padding: 4px 12px;
+            background: linear-gradient(135deg, #e8ecff, #f0f4ff);
+            border-radius: 20px;
+            border: 2px solid #667eea;
+        }
+        
+        .analysis-footer {
+            margin-top: 20px;
+            padding: 16px;
+            background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            position: relative;
+        }
+        
+        .analysis-footer::before {
+            content: "✨";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2em;
+        }
+        
         footer {
             background: var(--white);
             width: 100%;
@@ -342,7 +557,7 @@
     <header>
         <div class="container nav">
             <a href="https://text2.click" class="logo">
-                <span aria-label="Love" role="img">❤️</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z"/></svg>
                 <span>Love Match</span>
             </a>
             <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-list">
@@ -361,14 +576,14 @@
     </header>
     <main>
         <section class="love-box" aria-label="Compatibility tool">
-            <h1>❤️ Love Match</h1>
+            <h1><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="vertical-align: -4px; color: var(--primary);"><path fill="currentColor" d="M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z"/></svg> Love Match</h1>
             <p>Discover the compatibility between you and your loved one by entering names below!</p>
             <form id="loveForm" autocomplete="off">
                 <div class="input-group">
                     <input id="name1" name="name1" placeholder="Enter first person's name..." type="text" maxlength="32" autocomplete="off" required />
                     <input id="name2" name="name2" placeholder="Enter second person's name..." type="text" maxlength="32" autocomplete="off" required />
                 </div>
-                <button type="submit" class="btn-calc">Calculate Compatibility</button>
+                <button type="submit" class="btn-calc"><span class="btn-inner"><svg class="btn-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z"/></svg><span class="btn-label">Calculate Compatibility</span></span></button>
                 <span class="error-message" id="error" aria-live="polite"></span>
                 <div id="result" aria-live="polite"></div>
             </form>
@@ -436,7 +651,7 @@
             if (isSpecialPair(name1, name2)) {
                 const lovePercentage = 100;
                 const message = 'Tình yêu tuyệt vời!';
-                return `<span class="heart-icon">❤️</span> Compatibility Score: <strong>${lovePercentage}%</strong><br>${message}`;
+                return `<svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z"/></svg> Compatibility Score: <strong>${lovePercentage}%</strong><br>${message}`;
             }
 
             // Enhanced compatibility calculation
@@ -461,7 +676,7 @@
             let message = getCompatibilityMessage(lovePercentage);
             let details = getDetailedAnalysis(compatibility);
             
-            return `<span class="heart-icon">❤️</span> Compatibility Score: <strong>${lovePercentage}%</strong><br>${message}<br><br><details><summary>📊 Detailed Analysis</summary><div style="text-align: left; margin-top: 10px; font-size: 0.9rem;">${details}</div></details>`;
+            return `<svg class=\"heart-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" d=\"M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z\"/></svg> Compatibility Score: <strong>${lovePercentage}%</strong><br>${message}<br><br><details class="detailed-analysis"><summary>Detailed Analysis</summary><div class="analysis-content">${details}</div></details>`;
         }
 
         function calculateBasicCompatibility(str1, str2) {
@@ -587,15 +802,28 @@
 
         function getDetailedAnalysis(compatibility) {
             return `
-                <div style="margin-bottom: 15px;">
-                    <strong>🔢 Basic Compatibility:</strong> ${compatibility.basic}%<br>
-                    <strong>⭐ Zodiac Compatibility:</strong> ${compatibility.zodiac}%<br>
-                    <strong>🔮 Numerology:</strong> ${compatibility.numerology}%<br>
-                    <strong>📝 Name Analysis:</strong> ${compatibility.nameAnalysis}%<br>
-                    <strong>💝 Emotional Bond:</strong> ${compatibility.emotional}%
+                <div class="analysis-item">
+                    <div class="analysis-label">🔢 Basic Compatibility</div>
+                    <div class="analysis-score">${compatibility.basic}%</div>
                 </div>
-                <div style="font-size: 0.85rem; color: #666;">
-                    💡 <em>This analysis combines multiple factors including cosmic energies, name vibrations, and emotional resonance to provide a comprehensive compatibility assessment.</em>
+                <div class="analysis-item">
+                    <div class="analysis-label">⭐ Zodiac Compatibility</div>
+                    <div class="analysis-score">${compatibility.zodiac}%</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">🔮 Numerology</div>
+                    <div class="analysis-score">${compatibility.numerology}%</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">📝 Name Analysis</div>
+                    <div class="analysis-score">${compatibility.nameAnalysis}%</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">💝 Emotional Bond</div>
+                    <div class="analysis-score">${compatibility.emotional}%</div>
+                </div>
+                <div class="analysis-footer">
+                    This analysis combines multiple factors including cosmic energies, name vibrations, and emotional resonance to provide a comprehensive compatibility assessment.
                 </div>
             `;
         }
