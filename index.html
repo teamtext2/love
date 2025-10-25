@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>Text2 - Love Match</title>
+    <title>Text2 - Bói Tình Yêu</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1722731267767270"
      crossorigin="anonymous"></script>
         <link rel="canonical" href="https://text2.click/app/love/">
@@ -22,27 +22,27 @@
 
   gtag('config', 'G-6J85STMJ14');
 </script> 
-    <meta name="description" content="Text2 - Love Match: Check love compatibility by name. Fast, fun, and accurate results for couples.">
-    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Text2 - Bói Tình Yêu: Kiểm tra độ tương hợp tình yêu qua tên. Nhanh chóng, thú vị và kết quả chính xác cho các cặp đôi.">
+    <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Text2">
     <meta property="og:url" content="https://text2.click/app/love/">
-    <meta property="og:title" content="Text2 - Love Match">
-    <meta property="og:description" content="Check love compatibility by name with Text2 - Love Match.">
+    <meta property="og:title" content="Text2 - Bói Tình Yêu">
+    <meta property="og:description" content="Kiểm tra độ tương hợp tình yêu qua tên với Text2 - Bói Tình Yêu.">
     <meta property="og:image" content="https://text2.click/app/love/favicon.ico">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Text2 - Love Match">
-    <meta name="twitter:description" content="Check love compatibility by name with Text2 - Love Match.">
+    <meta name="twitter:title" content="Text2 - Bói Tình Yêu">
+    <meta name="twitter:description" content="Kiểm tra độ tương hợp tình yêu qua tên với Text2 - Bói Tình Yêu.">
     <meta name="twitter:image" content="https://text2.click/app/love/favicon.ico">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Text2 - Love Match",
+      "name": "Text2 - Bói Tình Yêu",
       "url": "https://text2.click/app/love/",
-      "applicationCategory": "EntertainmentApplication",
+      "applicationCategory": "UngDungGiaiTri",
       "operatingSystem": "Web",
-      "description": "Check love compatibility by name with Text2 - Love Match.",
+      "description": "Kiểm tra độ tương hợp tình yêu qua tên với Text2 - Bói Tình Yêu.",
       "publisher": {
         "@type": "Organization",
         "name": "Text2",
@@ -50,812 +50,339 @@
       }
     }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tải Google Fonts (Lora cho tiêu đề, Inter cho nội dung) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <style>
-        :root {
-            --primary: #e94057;
-            --primary-dark: #be2643;
-            --accent: #ffb4c6;
-            --background: #fff0f6;
-            --white: #fff;
-            --shadow: rgba(233, 64, 87, 0.12) 0 4px 24px;
-        }
-        * {
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
+        /* Áp dụng font chữ tùy chỉnh */
         body {
-            margin: 0;
-            font-family: 'Poppins', Arial, sans-serif;
-            background: var(--background);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            color: #2d2d2d;
+            font-family: 'Inter', sans-serif;
         }
-        header {
-            background: var(--white);
-            box-shadow: 0 2px 8px rgba(233,64,87,0.07);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+        h1, h2, .font-lora {
+            font-family: 'Lora', serif;
         }
-        .container {
-            max-width: 540px;
-            width: 95%;
-            margin: 0 auto;
-            padding: 0 16px;
+        
+        /* Tùy chỉnh thanh cuộn cho đẹp hơn */
+        ::-webkit-scrollbar {
+            width: 6px;
         }
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 56px;
+        ::-webkit-scrollbar-track {
+            background: #2c1a4a;
         }
-        /* Menu button for mobile/tablet */
-        .menu-toggle {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            background: var(--white);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            align-items: center;
-            box-shadow: 0 1px 3px rgba(233,64,87,0.07);
-            transition: background 0.2s;
+        ::-webkit-scrollbar-thumb {
+            background: #ec4899; /* Màu hồng */
+            border-radius: 10px;
         }
-        .menu-toggle:active, .menu-toggle:focus {
-            background: #ffe2ec;
-            outline: none;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f472b6;
         }
-        .bar {
-            width: 26px;
-            height: 3px;
-            background: var(--primary);
-            margin: 3px 0;
-            border-radius: 3px;
-            transition: 0.3s;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            margin-right: 12px;
-        }
-        .logo span {
-            margin-left: 8px;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            margin: 0;
-            padding: 0;
-            align-items: center;
-        }
-        nav a {
-            color: #5e5e5e;
-            font-weight: 500;
-            font-size: 1.05rem;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        nav a:hover, nav a:focus {
-            color: var(--primary-dark);
-        }
-        /* Hide nav on mobile, show when menu button is clicked */
-        @media (max-width: 700px) {
-            .nav {
-                min-height: 44px;
-            }
-            .logo {
-                font-size: 1.18rem;
-            }
-            nav ul {
-                position: absolute;
-                top: 56px;
-                right: 12px;
-                background: var(--white);
-                box-shadow: 0 4px 14px rgba(233,64,87,0.14);
-                border-radius: 14px;
-                flex-direction: column;
-                gap: 0;
-                min-width: 150px;
-                padding: 10px 0;
-                z-index: 9999;
-                display: none;
-                margin: 0;
-            }
-            nav ul.active {
-                display: flex;
-            }
-            nav ul li {
-                width: 100%;
-                text-align: left;
-                padding: 0;
-            }
-            nav ul li a {
-                display: block;
-                padding: 10px 24px;
-                font-size: 1rem;
-            }
-            .menu-toggle {
-                display: flex;
-            }
-        }
-        @media (min-width: 701px) {
-            .menu-toggle {
-                display: none;
-            }
-        }
-        main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 32px 0 48px 0;
-            background: linear-gradient(135deg, #ffe2ec 40%, #fad0c4 100%);
-        }
-        .love-box {
-            background: var(--white);
-            padding: 40px 30px 32px 30px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            width: 100%;
-            max-width: 420px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-        }
-        .love-box h1 {
-            color: var(--primary);
-            font-size: 2.1rem;
-            margin-bottom: 4px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        .love-box p {
-            color: #555;
-            margin-bottom: 32px;
-        }
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            margin-bottom: 8px;
-        }
-        .input-group input {
-            padding: 14px 16px;
-            border: 2px solid var(--accent);
-            border-radius: 12px;
-            font-size: 1rem;
-            outline: none;
-            transition: border 0.22s, box-shadow 0.2s;
-            background: #fff;
-        }
-        .input-group input:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px #ffd6e6;
-        }
-        /* Beautiful buttons */
-        .btn-calc {
-            width: 100%;
-            margin-top: 18px;
-            padding: 14px 18px;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #fff;
-            border: 0;
-            border-radius: 14px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #ff5f8f 0%, #e94057 40%, #ff7aa6 100%);
-            box-shadow: 0 10px 20px rgba(233, 64, 87, 0.20), 0 4px 10px rgba(233, 64, 87, 0.12);
-            transition: transform 0.12s ease, box-shadow 0.2s ease, filter 0.2s ease;
-        }
-        .btn-calc:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 28px rgba(233, 64, 87, 0.26), 0 6px 14px rgba(233, 64, 87, 0.16);
-            filter: brightness(1.03);
-        }
-        .btn-calc:active {
-            transform: translateY(0);
-            box-shadow: 0 8px 16px rgba(233, 64, 87, 0.18), 0 3px 8px rgba(233, 64, 87, 0.12);
-        }
-        .btn-calc:focus-visible {
-            outline: none;
-            box-shadow: 0 0 0 4px #ffd6e6, 0 10px 20px rgba(233, 64, 87, 0.20);
-        }
-        .btn-calc::before {
-            content: "";
-            position: absolute;
-            top: -100%;
-            left: -50%;
-            width: 50%;
-            height: 300%;
-            transform: rotate(35deg);
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
-            transition: transform 0.6s ease;
-        }
-        .btn-calc:hover::before {
-            transform: translateX(200%) rotate(35deg);
-        }
-        /* Ripple effect */
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            transform: scale(0);
-            animation: ripple 600ms ease-out;
-            background: rgba(255, 255, 255, 0.55);
-            pointer-events: none;
-            mix-blend-mode: screen;
-        }
-        @keyframes ripple {
+
+        /* Định nghĩa animation cho spinner loading */
+        @keyframes spin {
             to {
-                transform: scale(3.5);
-                opacity: 0;
+                transform: rotate(360deg);
             }
         }
-        .error-message {
-            color: var(--primary);
-            font-size: 1rem;
-            margin: 10px 0;
-            min-height: 20px;
-            display: block;
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #ec4899; /* Màu hồng */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
         }
-        #result {
-            margin-top: 30px;
-            min-height: 54px;
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: #222;
-            background: #fff0f5;
-            border-radius: 12px;
-            padding: 16px 12px;
-            box-sizing: border-box;
-            box-shadow: 0 3px 16px rgba(255,51,102,.06);
-        }
-        .heart-icon {
-            color: var(--primary);
-            width: 1.5em;
-            height: 1.5em;
-            vertical-align: middle;
-            display: inline-block;
-            animation: heartbeat 1.5s infinite;
-        }
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1);}
-            20% { transform: scale(1.2);}
-            40% { transform: scale(1);}
-            60% { transform: scale(1.15);}
-            80% { transform: scale(1);}
-        }
-        /* Button inner layout and icon */
-        .btn-inner { display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
-        .btn-icon { display: inline-block; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.12)); }
-        
-        /* Enhanced Detailed Analysis Button */
-        .detailed-analysis {
-            margin-top: 20px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.25);
-            transition: all 0.3s ease;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .detailed-analysis::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.8s ease;
-        }
-        
-        .detailed-analysis:hover::before {
-            left: 100%;
-        }
-        
-        .detailed-analysis:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.35);
-        }
-        
-        .detailed-analysis summary {
-            padding: 16px 20px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: white;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: transparent;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .detailed-analysis summary::-webkit-details-marker {
-            display: none;
-        }
-        
-        .detailed-analysis summary::before {
-            content: "📊";
-            font-size: 1.3em;
-            animation: pulse 2s infinite;
-        }
-        
-        .detailed-analysis summary::after {
-            content: "▼";
-            font-size: 0.9em;
-            transition: transform 0.3s ease;
-            margin-left: auto;
-        }
-        
-        .detailed-analysis[open] summary::after {
-            transform: rotate(180deg);
-        }
-        
-        .detailed-analysis summary:hover {
-            background: rgba(255,255,255,0.1);
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        
-        .detailed-analysis .analysis-content {
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
-            padding: 24px 20px;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            animation: slideDown 0.4s ease-out;
-        }
-        
-        @keyframes slideDown {
+
+        /* Animation cho thẻ kết quả */
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-10px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
-        .analysis-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 16px;
-            margin: 8px 0;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .analysis-item::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 4px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 0 4px 4px 0;
-        }
-        
-        .analysis-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
-        }
-        
-        .analysis-label {
-            font-weight: 600;
-            color: #4a5568;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .analysis-score {
-            font-weight: 700;
-            font-size: 1.1em;
-            color: #667eea;
-            padding: 4px 12px;
-            background: linear-gradient(135deg, #e8ecff, #f0f4ff);
-            border-radius: 20px;
-            border: 2px solid #667eea;
-        }
-        
-        .analysis-footer {
-            margin-top: 20px;
-            padding: 16px;
-            background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            text-align: center;
-            font-style: italic;
-            color: #666;
-            position: relative;
-        }
-        
-        .analysis-footer::before {
-            content: "✨";
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 0 10px;
-            font-size: 1.2em;
-        }
-        
-        footer {
-            background: var(--white);
-            width: 100%;
-            box-shadow: 0 -1px 6px rgba(233,64,87,0.07);
-            margin-top: auto;
-        }
-        .footer-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 24px 16px 16px 16px;
-            text-align: center;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 1rem;
-        }
-        .footer-links a {
-            color: #5e5e5e;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.2s;
-        }
-        .footer-links a:hover {
-            color: var(--primary-dark);
-        }
-        .copyright {
-            color: #b8b8b8;
-            font-size: 0.98rem;
-        }
-
-        @media (max-width: 600px) {
-            .container { max-width: 100%; padding: 0 6px; }
-            .love-box { padding: 28px 4px 22px 4px; }
-            nav ul { top: 44px; right: 2px; min-width: 120px; }
-            .footer-links { gap: 1rem; }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="container nav">
-            <a href="https://text2.click" class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z"/></svg>
-                <span>Love Match</span>
-            </a>
-            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-list">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <nav>
-                <ul id="nav-list">
-                    <li><a href="https://text2.click">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="https://text2.click">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="love-box" aria-label="Compatibility tool">
-            <h1><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="vertical-align: -4px; color: var(--primary);"><path fill="currentColor" d="M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z"/></svg> Love Match</h1>
-            <p>Discover the compatibility between you and your loved one by entering names below!</p>
-            <form id="loveForm" autocomplete="off">
-                <div class="input-group">
-                    <input id="name1" name="name1" placeholder="Enter first person's name..." type="text" maxlength="32" autocomplete="off" required />
-                    <input id="name2" name="name2" placeholder="Enter second person's name..." type="text" maxlength="32" autocomplete="off" required />
-                </div>
-                <button type="submit" class="btn-calc"><span class="btn-inner"><svg class="btn-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z"/></svg><span class="btn-label">Calculate Compatibility</span></span></button>
-                <span class="error-message" id="error" aria-live="polite"></span>
-                <div id="result" aria-live="polite"></div>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">FAQ</a>
-            </div>
-            <div class="copyright">© 2024 Love Match. All rights reserved by the development team.</div>
-        </div>
-    </footer>
-    <script>
-        // Toggle menu for mobile/tablet
-        const menuBtn = document.querySelector('.menu-toggle');
-        const navList = document.getElementById('nav-list');
-        menuBtn.addEventListener('click', function() {
-            navList.classList.toggle('active');
-            let expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', String(!expanded));
-        });
-        // Close menu when click outside
-        document.addEventListener('click', function(e) {
-            if (!menuBtn.contains(e.target) && !navList.contains(e.target)) {
-                navList.classList.remove('active');
-                menuBtn.setAttribute('aria-expanded', 'false');
-            }
-        });
+<body class="bg-gradient-to-b from-gray-900 via-purple-900 to-indigo-950 min-h-screen text-gray-100 p-6 flex items-center justify-center">
 
-        const form = document.getElementById('loveForm');
+    <main class="w-full max-w-md">
+        <!-- Thẻ chính của ứng dụng -->
+        <div class="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
+            <div class="p-8 md:p-10">
+                <h1 class="font-lora text-4xl font-bold text-center text-pink-300 mb-2">
+                    Bói tình yêu theo tên 
+                </h1>
+                <!-- Vùng nhập liệu -->
+                <div id="input-section" class="space-y-6">
+                    <div>
+                        <label for="name1" class="block text-sm font-medium text-pink-200 mb-2">Tên bạn nam</label>
+                        <input type="text" id="name1" placeholder="Nhập tên bạn nam" class="w-full bg-white/10 border-2 border-transparent focus:border-pink-400 focus:ring-0 text-white placeholder-gray-400 rounded-xl py-3 px-4 transition-all duration-300 outline-none">
+                    </div>
+                    
+                    <div>
+                        <label for="name2" class="block text-sm font-medium text-pink-200 mb-2">Tên bạn nữ</label>
+                        <input type="text" id="name2" placeholder="Nhập tên bạn nữ" class="w-full bg-white/10 border-2 border-transparent focus:border-pink-400 focus:ring-0 text-white placeholder-gray-400 rounded-xl py-3 px-4 transition-all duration-300 outline-none">
+                    </div>
+
+                    <!-- Thông báo lỗi -->
+                    <div id="error-message" class="text-red-400 text-center text-sm hidden">
+                        Vui lòng nhập cả hai tên nhé!
+                    </div>
+
+                    <!-- Nút bấm -->
+                    <button id="submitButton" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-opacity-75 shadow-lg">
+                        Xem kết quả
+                    </button>
+                </div>
+            </div>
+
+            <!-- Vùng kết quả (ẩn ban đầu) -->
+            <div id="results" class="hidden bg-black/20 p-8 md:p-10">
+                <!-- Trạng thái loading -->
+                <div id="loading" class="flex justify-center items-center py-10 hidden">
+                    <div class="spinner"></div>
+                    <p class="ml-4 text-purple-200">Đang phân tích định mệnh...</p>
+                </div>
+
+                <!-- Nội dung kết quả -->
+                <div id="result-content" class="hidden text-center fade-in">
+                    <h2 class="font-lora text-2xl font-bold text-pink-300 mb-4">Kết Quả Tương Hợp</h2>
+                    
+                    <!-- Điểm số -->
+                    <div class="my-6">
+                        <div id="score" class="text-7xl font-bold text-pink-400" style="text-shadow: 0 0 15px rgba(236, 72, 153, 0.7);">
+                            <!-- 88% -->
+                        </div>
+                        <p class="text-purple-200">mức độ hòa hợp</p>
+                    </div>
+
+                    <!-- Phân tích chi tiết từ AI -->
+                    <h3 class="font-lora text-xl font-semibold text-purple-200 mb-3">Lời Tiên Tri Tình Yêu</h3>
+                    <p id="analysis-text" class="text-gray-200 text-left leading-relaxed whitespace-pre-line">
+                        <!-- Nội dung do AI tạo ra sẽ ở đây -->
+                    </p>
+
+                    <!-- Nút bói lại -->
+                    <button id="reset-button" class="mt-8 bg-white/20 hover:bg-white/30 text-white font-medium py-2 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50">
+                        Thử lại với tên khác
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="text-center text-purple-400 text-xs mt-6">
+            Text2 - Yên tâm về độ chính xác
+        </footer>
+    </main>
+
+    <script>
+        // Lấy các phần tử DOM
         const name1Input = document.getElementById('name1');
         const name2Input = document.getElementById('name2');
-        const resultDiv = document.getElementById('result');
-        const errorDiv = document.getElementById('error');
+        const submitButton = document.getElementById('submitButton');
+        const errorMessage = document.getElementById('error-message');
+        
+        const inputSection = document.getElementById('input-section');
+        const resultsDiv = document.getElementById('results');
+        const loadingDiv = document.getElementById('loading');
+        const resultContentDiv = document.getElementById('result-content');
+        
+        const scoreEl = document.getElementById('score');
+        const analysisEl = document.getElementById('analysis-text');
+        const resetButton = document.getElementById('reset-button');
 
-        function normalizeName(name) {
-            return name
-                .toLowerCase()
-                .normalize('NFD')
-                .replace(/[\u0300-\u036f]/g, '')
-                .replace(/[^a-z\s]/g, ' ')
-                .replace(/\s+/g, ' ')
-                .trim();
-        }
+        // Thêm sự kiện click cho nút
+        submitButton.addEventListener('click', calculateLove);
+        resetButton.addEventListener('click', resetForm);
 
-        function isSpecialPair(a, b) {
-            const n1 = normalizeName(a);
-            const n2 = normalizeName(b);
-            const pairs = [
-                ['nhat anh', 'ngoc han'],
-                ['hoa nhat anh', 'thi ngoc han'],
-                ['anh', 'han']
-            ];
-            return pairs.some(([x, y]) => (n1 === x && n2 === y) || (n1 === y && n2 === x));
-        }
+        /**
+         * Hàm chính khi bấm nút "Xem kết quả"
+         */
+        function calculateLove() {
+            const name1 = name1Input.value.trim();
+            const name2 = name2Input.value.trim();
 
-        function calculateCompatibility(name1, name2) {
-            let str1 = name1.trim().toLowerCase();
-            let str2 = name2.trim().toLowerCase();
-            
-            // Special cases: predefined perfect matches
-            if (isSpecialPair(name1, name2)) {
-                const lovePercentage = 100;
-                const message = 'Tình yêu tuyệt vời!';
-                return `<svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z"/></svg> Compatibility Score: <strong>${lovePercentage}%</strong><br>${message}`;
-            }
-
-            // Enhanced compatibility calculation
-            let compatibility = {
-                basic: calculateBasicCompatibility(str1, str2),
-                zodiac: calculateZodiacCompatibility(str1, str2),
-                numerology: calculateNumerologyCompatibility(str1, str2),
-                nameAnalysis: calculateNameAnalysis(str1, str2),
-                emotional: calculateEmotionalCompatibility(str1, str2)
-            };
-            
-            // Weighted average of all factors
-            let totalScore = (
-                compatibility.basic * 0.25 +
-                compatibility.zodiac * 0.25 +
-                compatibility.numerology * 0.20 +
-                compatibility.nameAnalysis * 0.20 +
-                compatibility.emotional * 0.10
-            );
-            
-            let lovePercentage = Math.round(totalScore);
-            let message = getCompatibilityMessage(lovePercentage);
-            let details = getDetailedAnalysis(compatibility);
-            
-            return `<svg class=\"heart-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" d=\"M12 21s-6.716-4.387-9.317-7.332C.88 11.58 1.04 8.6 3.05 6.78c1.9-1.724 4.75-1.45 6.55.39L12 9.62l2.4-2.45c1.8-1.84 4.65-2.114 6.55-.39 2.01 1.82 2.17 4.8.367 6.888C18.716 16.613 12 21 12 21z\"/></svg> Compatibility Score: <strong>${lovePercentage}%</strong><br>${message}<br><br><details class="detailed-analysis"><summary>Detailed Analysis</summary><div class="analysis-content">${details}</div></details>`;
-        }
-
-        function calculateBasicCompatibility(str1, str2) {
-            let totalValue = 0;
-            for (let char of (str1 + str2)) {
-                totalValue += char.charCodeAt(0);
-            }
-            return (totalValue % 101);
-        }
-
-        function calculateZodiacCompatibility(str1, str2) {
-            // Simple zodiac calculation based on name length and character distribution
-            let zodiac1 = getZodiacSign(str1);
-            let zodiac2 = getZodiacSign(str2);
-            
-            let compatibility = {
-                'aries': { 'aries': 85, 'leo': 90, 'sagittarius': 85, 'gemini': 70, 'aquarius': 75, 'libra': 65, 'cancer': 60, 'virgo': 55, 'scorpio': 65, 'capricorn': 60, 'pisces': 55, 'taurus': 50 },
-                'taurus': { 'taurus': 90, 'virgo': 85, 'capricorn': 85, 'cancer': 80, 'pisces': 80, 'scorpio': 75, 'libra': 70, 'gemini': 55, 'aquarius': 50, 'aries': 50, 'leo': 60, 'sagittarius': 55 },
-                'gemini': { 'gemini': 85, 'libra': 85, 'aquarius': 85, 'aries': 70, 'leo': 75, 'sagittarius': 80, 'virgo': 60, 'cancer': 55, 'scorpio': 50, 'capricorn': 55, 'pisces': 60, 'taurus': 55 },
-                'cancer': { 'cancer': 90, 'scorpio': 85, 'pisces': 85, 'taurus': 80, 'virgo': 75, 'capricorn': 70, 'libra': 60, 'gemini': 55, 'aquarius': 50, 'aries': 60, 'leo': 65, 'sagittarius': 60 },
-                'leo': { 'leo': 90, 'aries': 90, 'sagittarius': 85, 'gemini': 75, 'libra': 80, 'aquarius': 75, 'cancer': 65, 'virgo': 60, 'scorpio': 70, 'capricorn': 65, 'pisces': 60, 'taurus': 60 },
-                'virgo': { 'virgo': 85, 'taurus': 85, 'capricorn': 85, 'cancer': 75, 'scorpio': 75, 'pisces': 70, 'libra': 65, 'gemini': 60, 'aquarius': 55, 'aries': 55, 'leo': 60, 'sagittarius': 55 },
-                'libra': { 'libra': 85, 'gemini': 85, 'aquarius': 85, 'leo': 80, 'sagittarius': 75, 'aries': 65, 'cancer': 60, 'virgo': 65, 'scorpio': 70, 'capricorn': 60, 'pisces': 65, 'taurus': 70 },
-                'scorpio': { 'scorpio': 90, 'cancer': 85, 'pisces': 85, 'taurus': 75, 'virgo': 75, 'capricorn': 70, 'libra': 70, 'gemini': 50, 'aquarius': 55, 'aries': 65, 'leo': 70, 'sagittarius': 65 },
-                'sagittarius': { 'sagittarius': 85, 'aries': 85, 'leo': 85, 'gemini': 80, 'libra': 75, 'aquarius': 80, 'cancer': 60, 'virgo': 55, 'scorpio': 65, 'capricorn': 70, 'pisces': 65, 'taurus': 55 },
-                'capricorn': { 'capricorn': 90, 'taurus': 85, 'virgo': 85, 'cancer': 70, 'scorpio': 70, 'pisces': 75, 'libra': 60, 'gemini': 55, 'aquarius': 65, 'aries': 60, 'leo': 65, 'sagittarius': 70 },
-                'aquarius': { 'aquarius': 85, 'gemini': 85, 'libra': 85, 'sagittarius': 80, 'aries': 75, 'leo': 75, 'cancer': 50, 'virgo': 55, 'scorpio': 55, 'capricorn': 65, 'pisces': 70, 'taurus': 50 },
-                'pisces': { 'pisces': 90, 'cancer': 85, 'scorpio': 85, 'taurus': 80, 'virgo': 70, 'capricorn': 75, 'libra': 65, 'gemini': 60, 'aquarius': 70, 'aries': 55, 'leo': 60, 'sagittarius': 65 }
-            };
-            
-            return compatibility[zodiac1] ? compatibility[zodiac1][zodiac2] || 60 : 60;
-        }
-
-        function getZodiacSign(name) {
-            let sum = 0;
-            for (let char of name) {
-                sum += char.charCodeAt(0);
-            }
-            let zodiacSigns = ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'];
-            return zodiacSigns[sum % 12];
-        }
-
-        function calculateNumerologyCompatibility(str1, str2) {
-            let num1 = calculateNameNumber(str1);
-            let num2 = calculateNameNumber(str2);
-            
-            let compatibility = {
-                1: { 1: 85, 2: 70, 3: 80, 4: 65, 5: 90, 6: 75, 7: 80, 8: 70, 9: 85 },
-                2: { 1: 70, 2: 90, 3: 75, 4: 85, 5: 70, 6: 90, 7: 75, 8: 85, 9: 70 },
-                3: { 1: 80, 2: 75, 3: 85, 4: 70, 5: 80, 6: 75, 7: 90, 8: 70, 9: 85 },
-                4: { 1: 65, 2: 85, 3: 70, 4: 90, 5: 65, 6: 85, 7: 70, 8: 90, 9: 65 },
-                5: { 1: 90, 2: 70, 3: 80, 4: 65, 5: 85, 6: 70, 7: 80, 8: 65, 9: 90 },
-                6: { 1: 75, 2: 90, 3: 75, 4: 85, 5: 70, 6: 90, 7: 75, 8: 85, 9: 70 },
-                7: { 1: 80, 2: 75, 3: 90, 4: 70, 5: 80, 6: 75, 7: 85, 8: 70, 9: 80 },
-                8: { 1: 70, 2: 85, 3: 70, 4: 90, 5: 65, 6: 85, 7: 70, 8: 90, 9: 65 },
-                9: { 1: 85, 2: 70, 3: 85, 4: 65, 5: 90, 6: 70, 7: 80, 8: 65, 9: 85 }
-            };
-            
-            return compatibility[num1] ? compatibility[num1][num2] || 70 : 70;
-        }
-
-        function calculateNameNumber(name) {
-            let sum = 0;
-            for (let char of name) {
-                if (char >= 'a' && char <= 'z') {
-                    sum += char.charCodeAt(0) - 96;
-                }
-            }
-            while (sum > 9) {
-                sum = Math.floor(sum / 10) + (sum % 10);
-            }
-            return sum;
-        }
-
-        function calculateNameAnalysis(str1, str2) {
-            let vowels1 = (str1.match(/[aeiou]/g) || []).length;
-            let vowels2 = (str2.match(/[aeiou]/g) || []).length;
-            let consonants1 = str1.length - vowels1;
-            let consonants2 = str2.length - vowels2;
-            
-            let vowelBalance = Math.abs(vowels1 - vowels2);
-            let consonantBalance = Math.abs(consonants1 - consonants2);
-            
-            let score = 100 - (vowelBalance * 3 + consonantBalance * 2);
-            return Math.max(score, 30);
-        }
-
-        function calculateEmotionalCompatibility(str1, str2) {
-            let emotional1 = calculateEmotionalValue(str1);
-            let emotional2 = calculateEmotionalValue(str2);
-            
-            let difference = Math.abs(emotional1 - emotional2);
-            return Math.max(100 - difference * 2, 40);
-        }
-
-        function calculateEmotionalValue(name) {
-            let emotionalScore = 0;
-            for (let char of name) {
-                emotionalScore += char.charCodeAt(0) % 10;
-            }
-            return emotionalScore % 50 + 50;
-        }
-
-        function getCompatibilityMessage(percentage) {
-            if (percentage >= 90) {
-                return "🌟 Soulmates! A perfect cosmic connection! 💫";
-            } else if (percentage >= 80) {
-                return "💑 A match made in heaven! Incredible compatibility! 💕";
-            } else if (percentage >= 70) {
-                return "💖 Excellent compatibility! Great potential for love! ✨";
-            } else if (percentage >= 60) {
-                return "💕 Very good compatibility! Strong foundation for love! 🌹";
-            } else if (percentage >= 50) {
-                return "💝 Good compatibility! With effort, love can flourish! 🌸";
-            } else if (percentage >= 40) {
-                return "💫 Moderate compatibility! Friendship first, love may follow! 🌺";
-            } else if (percentage >= 30) {
-                return "🌱 Potential for growth! Start as friends and see what happens! 🌿";
-            } else {
-                return "💔 Challenging compatibility! Focus on friendship first! 🌱";
-            }
-        }
-
-        function getDetailedAnalysis(compatibility) {
-            return `
-                <div class="analysis-item">
-                    <div class="analysis-label">🔢 Basic Compatibility</div>
-                    <div class="analysis-score">${compatibility.basic}%</div>
-                </div>
-                <div class="analysis-item">
-                    <div class="analysis-label">⭐ Zodiac Compatibility</div>
-                    <div class="analysis-score">${compatibility.zodiac}%</div>
-                </div>
-                <div class="analysis-item">
-                    <div class="analysis-label">🔮 Numerology</div>
-                    <div class="analysis-score">${compatibility.numerology}%</div>
-                </div>
-                <div class="analysis-item">
-                    <div class="analysis-label">📝 Name Analysis</div>
-                    <div class="analysis-score">${compatibility.nameAnalysis}%</div>
-                </div>
-                <div class="analysis-item">
-                    <div class="analysis-label">💝 Emotional Bond</div>
-                    <div class="analysis-score">${compatibility.emotional}%</div>
-                </div>
-                <div class="analysis-footer">
-                    This analysis combines multiple factors including cosmic energies, name vibrations, and emotional resonance to provide a comprehensive compatibility assessment.
-                </div>
-            `;
-        }
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name1 = name1Input.value;
-            const name2 = name2Input.value;
-            resultDiv.innerHTML = '';
-            errorDiv.textContent = '';
-
+            // 1. Kiểm tra dữ liệu đầu vào
             if (!name1 || !name2) {
-                errorDiv.textContent = "Please enter both names!";
+                errorMessage.classList.remove('hidden');
+                // Rung nhẹ thẻ input để báo lỗi
+                name1Input.classList.add('animate-bounce');
+                name2Input.classList.add('animate-bounce');
+                setTimeout(() => {
+                    name1Input.classList.remove('animate-bounce');
+                    name2Input.classList.remove('animate-bounce');
+                }, 500);
                 return;
             }
-            if (name1.length > 32 || name2.length > 32) {
-                errorDiv.textContent = "Name too long (maximum 32 characters)!";
-                return;
-            }
-            resultDiv.innerHTML = calculateCompatibility(name1, name2);
-        });
+            errorMessage.classList.add('hidden');
 
-        // Support pressing Enter to submit
-        [name1Input, name2Input].forEach(input => {
-            input.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    form.dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));
+            // 2. Hiển thị trạng thái loading, ẩn form
+            inputSection.classList.add('hidden');
+            resultsDiv.classList.remove('hidden');
+            loadingDiv.classList.remove('hidden');
+            resultContentDiv.classList.add('hidden');
+
+            // --- LOGIC KIỂM TRA ĐẶC BIỆT ---
+
+            // Helper function for normalization (robust)
+            // Chuẩn hóa tên: bỏ dấu, bỏ ký tự đặc biệt/số/dấu cách, chuyển về chữ thường
+            const normalizeForSpecialCheck = (name) => {
+                return name.toLowerCase()
+                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // remove accents
+                    .replace(/[^a-z]/g, ''); // remove spaces, hyphens, numbers, etc.
+            };
+
+            const normN1 = normalizeForSpecialCheck(name1);
+            const normN2 = normalizeForSpecialCheck(name2);
+
+            // Cặp đôi đặc biệt (đã chuẩn hóa)
+            const specialPairs = [
+                // (nhật anh, ngọc hân) và các biến thể
+                { p1: 'nhatanh', p2: 'ngochan' }, 
+                // (hóa nhật anh, thị ngọc hân) và các biến thể
+                { p1: 'hoanhatanh', p2: 'thingochan' }, 
+                // (anh, hân) và các biến thể
+                { p1: 'anh', p2: 'han' } 
+            ];
+
+            let isSpecialCase = false;
+            for (const pair of specialPairs) {
+                // Kiểm tra 2 chiều (ví dụ: name1=anh, name2=han HOẶC name1=han, name2=anh)
+                if ((normN1 === pair.p1 && normN2 === pair.p2) || (normN1 === pair.p2 && normN2 === pair.p1)) {
+                    isSpecialCase = true;
+                    break;
                 }
-            });
-        });
+            }
+
+            // 3. "Thuật toán" nội bộ để tạo điểm số
+            // Nếu là cặp đặc biệt thì 100%, nếu không thì tính toán như bình thường
+            const finalScore = isSpecialCase ? 100 : calculateLocalScore(name1, name2);
+            // --- KẾT THÚC LOGIC ĐẶC BIỆT ---
+
+
+            // 4. Gọi Gemini API để lấy phân tích chi tiết
+            fetchGeminiAnalysis(name1, name2, finalScore);
+        }
+
+        /**
+         * "Thuật toán bói tên" cục bộ
+         * Tạo ra một điểm số "hạt giống" dựa trên tên.
+         * Đây là một thuật toán giả lập cho vui.
+         */
+        function calculateLocalScore(name1, name2) {
+            const sumChars = (name) => {
+                // Chỉ lấy chữ cái tiếng Việt không dấu và chuyển sang chữ thường
+                const normalizedName = name.toLowerCase()
+                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                    .replace(/[^a-z]/g, '');
+                
+                let sum = 0;
+                for (let i = 0; i < normalizedName.length; i++) {
+                    sum += normalizedName.charCodeAt(i) - 96; // a=1, b=2, ...
+                }
+                return sum;
+            };
+
+            const num1 = sumChars(name1);
+            const num2 = sumChars(name2);
+
+            // Một công thức "huyền bí" kết hợp 2 con số
+            const baseScore = (num1 + num2 + (num1 * num2)) % 51; // 0-50
+            
+            // Đảm bảo điểm số luôn ở mức tích cực (cho vui)
+            const finalScore = baseScore + 50; // 50-100%
+            return finalScore;
+        }
+
+        /**
+         * Gọi API của Gemini để tạo phân tích chi tiết
+         */
+        async function fetchGeminiAnalysis(name1, name2, score) {
+            const apiKey = ""; // API key sẽ được tự động cung cấp trong môi trường chạy
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+            // Hệ thống prompt (vai trò của AI)
+            const systemPrompt = "Bạn là một nhà chiêm tinh tình yêu, chuyên bói toán về mối quan hệ qua tên. Giọng văn của bạn huyền bí, sâu sắc nhưng cũng rất lãng mạn và đáng yêu. Khi nhận được hai tên và một điểm số, hãy viết một đoạn phân tích (khoảng 3-5 câu) về mối quan hệ của họ. Giải thích tại sao họ hợp nhau (hoặc những thách thức) dựa trên 'âm hưởng' và 'năng lượng' từ tên của họ. Luôn kết thúc bằng một lời khuyên hoặc một câu thơ tình lãng mạn. KHÔNG lặp lại điểm số trong phân tích của bạn.";
+
+            // Câu hỏi của người dùng
+            const userQuery = `Tên 1: ${name1}\nTên 2: ${name2}\nĐiểm tương hợp: ${score}%\nHãy viết lời tiên tri tình yêu cho cặp đôi này.`;
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: userQuery }]
+                }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            // Thêm độ trễ giả để tăng kịch tính
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Gọi API thất bại với mã lỗi ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    displayResults(score, text);
+                } else {
+                    // Nếu không có kết quả từ AI, dùng text mặc định
+                    displayResults(score, "Các vì sao chưa sẵn sàng tiết lộ về mối liên kết này. Nhưng hãy nhớ rằng, tình yêu đích thực được xây dựng bằng trái tim, không phải bằng tên.");
+                }
+
+            } catch (error) {
+                console.error('Lỗi khi gọi API Gemini:', error);
+                // Xử lý lỗi, hiển thị một thông báo chung
+                displayResults(score, "Một đám mây vũ trụ đã tạm thời che khuất tầm nhìn của ta. Nhưng đừng lo, tình yêu của hai bạn vẫn tỏa sáng. Hãy thử lại sau giây lát.");
+            }
+        }
+        
+        /**
+         * Hàm hiển thị kết quả cuối cùng
+         */
+        function displayResults(score, analysis) {
+            // Ẩn loading
+            loadingDiv.classList.add('hidden');
+            
+            // Hiển thị nội dung
+            scoreEl.textContent = `${score}%`;
+            analysisEl.textContent = analysis;
+            resultContentDiv.classList.remove('hidden');
+        }
+
+        /**
+         * Hàm reset lại form để bói lại
+         */
+        function resetForm() {
+            // Ẩn kết quả, hiện lại form
+            resultsDiv.classList.add('hidden');
+            inputSection.classList.remove('hidden');
+
+            // Xóa nội dung
+            name1Input.value = '';
+            name2Input.value = '';
+            scoreEl.textContent = '';
+            analysisEl.textContent = '';
+        }
     </script>
 </body>
 </html>
